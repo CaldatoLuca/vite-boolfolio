@@ -1,8 +1,12 @@
 <script>
 //importo axios per usarlo
 import axios from "axios";
+import CardComponent from "./CardComponent.vue";
 
 export default {
+  components: {
+    CardComponent,
+  },
   data() {
     return {
       projects: [],
@@ -37,12 +41,19 @@ export default {
 <template>
   <main>
     <div class="container p-4">
-      <h2 class="text-center">Project List</h2>
-      <ul>
-        <li v-for="project in projects">
-          {{ project.title }}
-        </li>
-      </ul>
+      <!-- main title -->
+      <h2 class="text-center mb-3">Project List</h2>
+
+      <!-- griglia -->
+      <div class="row g-3">
+        <!-- elemento griglia -->
+        <div
+          class="col col-md-4 d-flex justify-content-center"
+          v-for="project in projects"
+        >
+          <CardComponent :project="project"></CardComponent>
+        </div>
+      </div>
     </div>
   </main>
 </template>
