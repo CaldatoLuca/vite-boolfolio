@@ -14,6 +14,9 @@ export default {
         descrizione uguale cosi da avere tutte le card uguali che mi da
         fastidio, poi sistemo
       </p>
+      <p class="card-text" v-if="project.type !== null">
+        {{ project.type.title }}
+      </p>
       <a
         v-if="project.github_url !== null"
         :href="project.github_url"
