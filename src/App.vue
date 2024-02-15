@@ -1,16 +1,21 @@
 <script>
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import AppFooter from "./components/AppFooter.vue";
+
 export default {
-  data() {
-    return {
-      title: "Vite Template",
-    };
+  components: {
+    AppHeader,
+    AppMain,
+    AppFooter,
   },
 };
 </script>
 
 <template>
-  <h1 class="text-center pt-5">{{ title }}</h1>
-  <h3 class="text-center">Template Vite con Bootstrap. SCSS e Axios</h3>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style scoped></style>
