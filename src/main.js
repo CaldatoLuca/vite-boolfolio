@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 
 //importo il router
-import router from "./router";
+import { router } from "./router";
 
 //importo il file styel.scss
 import "./scss/style.scss";

@@ -7,12 +7,23 @@ import AppAbout from "./pages/AppAbout.vue";
 import ProjectList from "./pages/ProjectList.vue";
 
 const router = createRouter({
-  //navigazione tramite browser - per single page application
   history: createWebHistory(),
-  router: [
-    { path: "/", name: "home", component: AppHome },
-    { path: "/project", name: "about", component: AppAbout },
-    { path: "/projects", name: "list", component: ProjectList },
+  routes: [
+    {
+      path: "/",
+      name: "home",
+      component: AppHome,
+    },
+    {
+      path: "/project",
+      name: "about",
+      component: AppAbout,
+    },
+    {
+      path: "/projects",
+      name: "list",
+      component: ProjectList,
+    },
   ],
 });
 
