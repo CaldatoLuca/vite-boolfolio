@@ -9,6 +9,7 @@ export default {
   },
   data() {
     return {
+      loading: false,
       currentPage: 1,
       data: [],
       baseUrl: "http://127.0.0.1:8000",
@@ -22,6 +23,7 @@ export default {
     //response dopo url
     //catch per eventuali errori
     getProjects() {
+      this.loading = true;
       axios
         .get(this.baseUrl + this.apiUrls.projects, {
           params: { page: this.currentPage },
@@ -31,7 +33,8 @@ export default {
         })
         .catch((error) => {
           console.log("Errore" + error);
-        });
+        })
+        .finally(() => (this.loading = false));
     },
     nextPage() {
       this.currentPage++;
@@ -55,8 +58,10 @@ export default {
       <!-- main title -->
       <h2 class="text-center mb-4">Project List</h2>
 
+      <div v-if="loading">Caricamento...</div>
+
       <!-- griglia -->
-      <div class="row g-3 mb-4">
+      <div v-else class="row g-3">
         <!-- elemento griglia -->
         <div
           class="col col-md-4 d-flex justify-content-center"
@@ -64,23 +69,23 @@ export default {
         >
           <CardComponent :project="project"></CardComponent>
         </div>
-      </div>
 
-      <div class="d-flex gap-3 justify-content-around">
-        <button
-          class="btn btn-primary"
-          @click="prevPage"
-          :disabled="data.prev_page_url === null"
-        >
-          Previus
-        </button>
-        <button
-          class="btn btn-primary"
-          @click="nextPage"
-          :disabled="data.next_page_url === null"
-        >
-          Next
-        </button>
+        <div class="col-12 d-flex gap-3 justify-content-around mt-4">
+          <button
+            class="btn btn-primary"
+            @click="prevPage"
+            :disabled="data.prev_page_url === null"
+          >
+            Previus
+          </button>
+          <button
+            class="btn btn-primary"
+            @click="nextPage"
+            :disabled="data.next_page_url === null"
+          >
+            Next
+          </button>
+        </div>
       </div>
     </div>
   </main>
