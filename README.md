@@ -15,3 +15,7 @@ creo in data tutte le variabili per rendere piu leggibile il codice e per render
 - metto in App.vue un tag che andrà a cambiare in base alla rotta chiamata (lo metto al posto di AppMain) dato che al click sul link in header voglio vedere lista, about, etc.
 
 - creo cartella pages in cui avro le pagine del progetto che sustituiranno il router-view
+
+- creo file router.js che similarmente a web.php gestirà le rotte (path, nome, componenti, parametri)
+
+- lo uso in createApp nel main.js - importandolo e usando (`.use(router)` prima del mount)
