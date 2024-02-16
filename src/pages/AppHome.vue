@@ -3,7 +3,7 @@ export default {};
 </script>
 
 <template>
-  <div>Home</div>
+  <main>ciao</main>
 </template>
 
 <style></style>

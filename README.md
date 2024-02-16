@@ -19,3 +19,5 @@ creo in data tutte le variabili per rendere piu leggibile il codice e per render
 - creo file router.js che similarmente a web.php gestirà le rotte (path, nome, componenti, parametri)
 
 - lo uso in createApp nel main.js - importandolo e usando (`.use(router)` prima del mount)
+
+- inserisco nell' header i router-link a cui passo il nome della rotta da chiamare al loro click, non ricaricano la pagina a differenza dei link classici
