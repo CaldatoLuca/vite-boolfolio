@@ -7,7 +7,6 @@ export default {
 <template>
   <!-- card del project -->
   <div class="card">
-    <img src="..." class="card-img-top" alt="..." />
     <div class="card-body">
       <h5 class="card-title">{{ project.title }}</h5>
       <p class="card-text">

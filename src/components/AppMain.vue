@@ -42,7 +42,7 @@ export default {
   <main>
     <div class="container p-4">
       <!-- main title -->
-      <h2 class="text-center mb-3">Project List</h2>
+      <h2 class="text-center mb-4">Project List</h2>
 
       <!-- griglia -->
       <div class="row g-3">
