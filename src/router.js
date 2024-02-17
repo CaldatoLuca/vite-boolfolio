@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from "vue-router";
 
 //importo i componenti
 import AppHome from "./pages/AppHome.vue";
-import AppAbout from "./pages/AppAbout.vue";
+import AppDetail from "./pages/AppDetail.vue";
 import ProjectList from "./pages/ProjectList.vue";
 import NotFound from "./pages/NotFound.vue";
 
@@ -16,9 +16,9 @@ const router = createRouter({
       component: AppHome,
     },
     {
-      path: "/project",
-      name: "about",
-      component: AppAbout,
+      path: "/project/:slug",
+      name: "detail",
+      component: AppDetail,
     },
     {
       path: "/projects",

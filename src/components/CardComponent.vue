@@ -9,6 +9,9 @@ export default {
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{ project.title }}</h5>
+      <router-link :to="{ name: 'detail', params: { slug: project.slug } }"
+        >Detail</router-link
+      >
       <p class="card-text">
         descrizione uguale cosi da avere tutte le card uguali che mi da
         fastidio, poi sistemo
