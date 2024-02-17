@@ -21,3 +21,11 @@ creo in data tutte le variabili per rendere piu leggibile il codice e per render
 - lo uso in createApp nel main.js - importandolo e usando (`.use(router)` prima del mount)
 
 - inserisco nell' header i router-link a cui passo il nome della rotta da chiamare al loro click, non ricaricano la pagina a differenza dei link classici
+
+- creo un a rotta di catch all per tutte quelle chiamate 404 not found, la inserisco alla fine del router
+
+- aggiungo alla pagina detail un parametro :slug, nel router
+
+- inserisco nella card il link alla pagina di dettaglio, a cui passo slug come parametro
+
+- creo la chiamata axios col parametro slug, mi avvalgo della variabile $route di vue
